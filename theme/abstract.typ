@@ -1,4 +1,4 @@
-#let acknowledgement() = {
+#let abstract(body) = {
   set page(
     margin: (left: 30mm, right: 30mm, top: 40mm, bottom: 40mm),
     numbering: none,
@@ -14,10 +14,16 @@
     lang: "en"
   )
 
-  set par(leading: 1em)
+  set par(
+    leading: 1em,
+    justify: true
+  )
 
-  
-  // --- Acknowledgements ---
-  align(left, text(font: sans-font, 2em, weight: 700,"Acknowledgements"))
-  v(15mm)
+  // --- Abstract ---
+  v(1fr)
+  align(center, text(font: body-font, 1em, weight: "semibold", "Abstract"))
+
+  body
+
+  v(1fr)
 }

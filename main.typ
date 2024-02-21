@@ -1,8 +1,9 @@
-#import "template.typ": *
-#import "cover.typ": cover
-#import "disclaimer.typ": *
-#import "acknowledgement.typ": *
-#import "abstract.typ": *
+#import "./theme/template.typ": *
+#import "./theme/cover.typ": cover
+#import "./theme/disclaimer.typ": disclaimer
+#import "./theme/acknowledgement.typ": acknowledgement
+#import "./theme/abstract.typ": abstract
+
 #import "metadata.typ": *
 #import "./utils/user_story.typ": *
 
@@ -22,9 +23,14 @@
   author: author,
 )
 
-#acknowledgement()
+#acknowledgement[Stuff]
 
-#abstract()
+#abstract[
+  Note:
+  1. *paragraph:* What is the motivation of your thesis? Why is it interesting from a scientific point of view? Which main problem do you like to solve?
+  2. *paragraph:* What is the purpose of the document? What is the main content, the main contribution?
+  3. *paragraph:* What is your methodology? How do you proceed?
+]
 
 #show: project.with(
   title: title,

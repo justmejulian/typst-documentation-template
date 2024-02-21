@@ -1,24 +1,7 @@
-#let getHeader() = {
-  locate(loc => {
-    // Find if there is a level 1 heading on the current page
-    let nextMainHeading = query(selector(heading).after(loc, inclusive: false), loc).find(headIt => {
-     headIt.location().page() == loc.page() and headIt.level == 1
-    })
-    if (nextMainHeading != none) {
-      // If there is a level 1 heading on the current page, don't show in header
-      return " "
-    }
-    // Find the last previous level 1 heading
-    let lastMainHeading = query(selector(heading).before(loc), loc).filter(headIt => {
-      headIt.level == 1
-    }).last()
-    return lastMainHeading.body
-  })
-}
+#import "../utils/getCurrentHeading.typ": getCurrentHeading
 
 #let project(
   title: "",
-  titleGerman: "",
   degree: "",
   program: "",
   advisor: "",
@@ -77,7 +60,7 @@
 
   // --- Figures ---
   show figure: set text(size: 0.85em)
-  
+
   // --- Table of Contents ---
   outline(
     title: {
@@ -86,18 +69,16 @@
     },
     indent: 2em
   )
-  
-  
+
   v(2.4fr)
   pagebreak()
-
 
   // Main body.
   set par(justify: true, first-line-indent: 2em)
 
   // Create Page Header
   set page(header: [
-      #getHeader()
+      #getCurrentHeading()
       #h(1fr)
       #author
   ])
@@ -126,5 +107,5 @@
   include("appendix.typ")
 
   pagebreak()
-  bibliography("bibliography.bib")
+  bibliography("../bibliography.bib")
 }
