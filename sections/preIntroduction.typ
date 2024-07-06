@@ -14,7 +14,7 @@ Typst Docs can be found here:
 === Image
 
 #figure(
-  image("./figures/logo.png", width: 50%),
+  image("../figures/logo.png", width: 50%),
   caption: [The ZHAW Logo]
 )
 
@@ -23,7 +23,7 @@ Typst Docs can be found here:
 #import "@preview/wrap-it:0.1.0": wrap-content
 
 #let boxed = box(figure(
-  image("./figures/logo.png", width: 10em),
+  image("../figures/logo.png", width: 10em),
   caption: [A figure],
 ), inset: 0.5em)
 
