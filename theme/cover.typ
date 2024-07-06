@@ -1,3 +1,5 @@
+#import "constant.typ": body-font, sans-font
+
 #let cover(
   title: "",
   subtitle: "",
@@ -14,9 +16,6 @@
     numbering: none,
     number-align: center,
   )
-
-  let body-font = "Helvetica Neue"
-  let sans-font = "Helvetica Neue"
 
   set text(
     font: body-font, 

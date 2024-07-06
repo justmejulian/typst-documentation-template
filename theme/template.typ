@@ -1,3 +1,5 @@
+#import "constant.typ": body-font, sans-font
+
 #import "../utils/getCurrentHeading.typ": getCurrentHeading
 
 #let project(
@@ -8,14 +10,12 @@
   author: "",
   body,
 ) = {
+
   set page(
     margin: (left: 30mm, right: 30mm, top: 40mm, bottom: 40mm),
     numbering: "1",
     number-align: center,
   )
-
-  let body-font = "Helvetica Neue"
-  let sans-font = "Helvetica Neue"
 
   set text(
     font: body-font, 

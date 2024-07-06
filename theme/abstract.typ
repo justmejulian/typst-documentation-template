@@ -1,12 +1,11 @@
+#import "constant.typ": body-font, sans-font
+
 #let abstract(body) = {
   set page(
     margin: (left: 30mm, right: 30mm, top: 40mm, bottom: 40mm),
     numbering: none,
     number-align: center,
   )
-
-  let body-font = "Helvetica Neue"
-  let sans-font = "Helvetica Neue"
 
   set text(
     font: body-font, 

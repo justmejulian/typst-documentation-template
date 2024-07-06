@@ -1,7 +1,7 @@
 #import "@preview/polylux:0.3.1": *
 #import themes.university: *
 
-#set text(font: "Helvetica Rounded")
+#set text(font: "Helvetica Neue")
 
 #let author = "Julian Visser"
 #let title = "WatchOS Velocity Recording"
