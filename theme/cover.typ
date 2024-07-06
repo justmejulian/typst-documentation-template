@@ -9,7 +9,6 @@
   expert: "",
   proofReader: "",
 ) = {
-  set document(title: title, author: author)
   set page(
     margin: (left: 30mm, right: 30mm, top: 20mm, bottom: 40mm),
     numbering: none,
@@ -64,6 +63,4 @@
       )
     )
   )
-
-  pagebreak()
 }

@@ -8,7 +8,6 @@
   author: "",
   body,
 ) = {
-  set document(title: title, author: author)
   set page(
     margin: (left: 30mm, right: 30mm, top: 40mm, bottom: 40mm),
     numbering: "1",
@@ -23,7 +22,7 @@
     size: 12pt, 
     lang: "en"
   )
-  
+
   show math.equation: set text(weight: 400)
 
   // --- Headings ---
