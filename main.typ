@@ -6,6 +6,8 @@
 
 #import "metadata.typ": *
 
+#set document(title: title, author: author, date: datetime.today())
+
 #cover(
   title: title,
   subtitle: subtitle,
