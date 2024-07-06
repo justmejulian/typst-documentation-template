@@ -24,6 +24,14 @@ typst compile main.typ
 typst watch main.typ
 ```
 
+I recommend using the skim pdf viewer, which can be installed via brew.
+
+Skim automatically reloads the pdf when it changes.
+
+```bash
+brew install --cask skim
+```
+
 ## neovim
 
 todo: add how to setup typst-lsp / Treesitter.
