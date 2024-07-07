@@ -14,3 +14,8 @@
     caption: caption
   )
 }
+
+#let pintoritaFile(url, caption: [], factor: none) = {
+  let raw = raw(read(url))
+  pintorita(raw, caption: caption, factor: factor)
+}

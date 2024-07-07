@@ -47,7 +47,7 @@ Typst Docs can be found here:
 Built using
 #link("https://pintorajs.vercel.app/")[Pintora]
 
-#import "../utils/pintorita.typ" : pintorita
+#import "../utils/pintorita.typ" : pintorita, pintoritaFile
 
 === UML
 
@@ -69,29 +69,8 @@ caption: [UML Diagrams]
 
 === Class Diagram
 
-#pintorita(
-```
-classDiagram
-  class Fruit {
-    <<interface>>
-    float sweetness
-    -float age
-
-    float getAge()
-  }
-
-  class Apple {
-    float softness
-    {static} Apple fromString(str)
-  }
-
-  %% There are so many kind of fruits
-  Fruit <|-- Apple
-  Fruit <|-- Kiwi
-  Fruit <|-- Banana
-
-  Fruit "many" --* "1" Bag: packed intro
-```,
+#pintoritaFile(
+  "../diagrams/classDiagram.pintora",
 caption: [Class Diagram],
 factor: 0.5
 )

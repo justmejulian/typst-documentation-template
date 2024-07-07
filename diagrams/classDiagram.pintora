@@ -1,0 +1,20 @@
+classDiagram
+  class Fruit {
+    <<interface>>
+    float sweetness
+    -float age
+
+    float getAge()
+  }
+
+  class Apple {
+    float softness
+    {static} Apple fromString(str)
+  }
+
+  %% There are so many kind of fruits
+  Fruit <|-- Apple
+  Fruit <|-- Kiwi
+  Fruit <|-- Banana
+
+  Fruit "many" --* "1" Bag: packed intro
