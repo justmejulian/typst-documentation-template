@@ -47,13 +47,12 @@ Typst Docs can be found here:
 Built using
 #link("https://pintorajs.vercel.app/")[Pintora]
 
-#import "@preview/pintorita:0.1.1"
-
-#show raw.where(lang: "pintora"): it => pintorita.render(it.text)
+#import "../utils/pintorita.typ" : pintorita
 
 === UML
 
-```pintora
+#pintorita(
+```
 mindmap
 @param layoutDirection TB
 + UML Diagrams
@@ -64,13 +63,14 @@ mindmap
 ++ Structural Diagrams
 +++ Class Diagram
 +++ Component Diagram
-```
+```,
+caption: [UML Diagrams]
+)
 
 === Class Diagram
 
-#show raw.where(lang: "pintora"): it => pintorita.render(it.text, factor:0.5)
-
-```pintora
+#pintorita(
+```
 classDiagram
   class Fruit {
     <<interface>>
@@ -91,4 +91,7 @@ classDiagram
   Fruit <|-- Banana
 
   Fruit "many" --* "1" Bag: packed intro
-```
+```,
+caption: [Class Diagram],
+factor: 0.5
+)
