@@ -13,10 +13,12 @@ Typst Docs can be found here:
 
 === Image
 
+The ZHAW Logo is shown in @logo.
+
 #figure(
   image("../figures/logo.png", width: 50%),
-  caption: [The ZHAW Logo]
-)
+  caption: "The ZHAW Logo"
+) <logo>
 
 ==== Wrapped Image
 
@@ -33,6 +35,8 @@ Typst Docs can be found here:
 
 === Table
 
+Look at @table.
+
 #figure(
   table(
     columns: 4,
@@ -40,7 +44,7 @@ Typst Docs can be found here:
     [y], [0.3s], [0.4s], [0.8s],
   ),
   caption: [Timing results],
-)
+) <table>
 
 == Diagrams
 
@@ -85,4 +89,3 @@ fn main() {
 }
 ```
 , caption: [Rust Code])
-
