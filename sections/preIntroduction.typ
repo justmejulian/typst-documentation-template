@@ -47,11 +47,11 @@ Typst Docs can be found here:
 Built using
 #link("https://pintorajs.vercel.app/")[Pintora]
 
-#import "../utils/pintorita.typ" : pintorita, pintoritaFile
+#import "../utils/pintorita.typ" : pintora, pintoraFile
 
 === UML
 
-#pintorita(
+#pintora(
 ```
 mindmap
 @param layoutDirection TB
@@ -69,7 +69,7 @@ caption: [UML Diagrams]
 
 === Class Diagram
 
-#pintoritaFile(
+#pintoraFile(
   "../diagrams/classDiagram.pintora",
 caption: [Class Diagram],
 factor: 0.5

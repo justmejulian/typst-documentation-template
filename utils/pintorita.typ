@@ -1,6 +1,6 @@
-#let pintorita(body, caption: [], factor: none) = {
-  import "@preview/pintorita:0.1.1"
+#import "@preview/pintorita:0.1.1"
 
+#let pintora(body, caption: [], factor: none) = {
   let content = {
     if factor == none {
       pintorita.render(body.text)
@@ -15,7 +15,7 @@
   )
 }
 
-#let pintoritaFile(url, caption: [], factor: none) = {
+#let pintoraFile(url, caption: [], factor: none) = {
   let raw = raw(read(url))
-  pintorita(raw, caption: caption, factor: factor)
+  pintora(raw, caption: caption, factor: factor)
 }
