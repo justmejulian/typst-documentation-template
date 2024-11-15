@@ -74,3 +74,15 @@ caption: [UML Diagrams]
 caption: [Class Diagram],
 factor: 0.5
 )
+
+== Code
+#import "../utils/code.typ" : code
+
+#code(
+```rust
+fn main() {
+    println!("Hello World!");
+}
+```
+, caption: [Rust Code])
+
