@@ -26,15 +26,18 @@
   show math.equation: set text(weight: 400)
 
   // --- Headings ---
-  show heading: set block(below: 0.85em, above: 1.75em)
+  show heading: set block(below: 1.25em, above: 1.75em)
   show heading: set text(font: body-font)
   set heading(numbering: "1.1")
-  // Add a pagebreak before each chapter.
   show heading: it => {
     if it.level == 1 {
-      pagebreak(weak: true)
+      pagebreak(weak: true) // Add a pagebreak before each chapter. (Heading level 1)
     }
-    it
+    if (it.level >= 4){
+      block(it.body) // Disable numbering for headings below level 3.
+    } else {
+      it
+    }
   }
 
   // Reference first-level headings as "chapters"
@@ -60,6 +63,9 @@
   // --- Figures ---
   show figure: set text(size: 0.85em)
 
+  set page(numbering: "i")
+  counter(page).update(1) // reset page count
+
   // --- Table of Contents ---
   outline(
     title: {
@@ -75,28 +81,32 @@
   // Main body.
   set par(justify: true, first-line-indent: 2em)
 
-  // Create Page Header
-  set page(header: [
+  // Page Header
+  set page(header: rect(stroke: (bottom: 0.5pt))[
       #getCurrentHeading()
       #h(1fr)
       #author
   ])
 
+  // Main body.
+  set page(numbering: "1")
+  counter(page).update(1) // reset page count
+
+  pagebreak()
   body
+  pagebreak()
 
   // List of figures.
-  pagebreak()
   heading(numbering: none)[List of Figures]
   outline(
-    title:"",
+    title: none,
     target: figure.where(kind: image),
   )
 
   // List of tables.
-  pagebreak()
   heading(numbering: none)[List of Tables]
   outline(
-    title: "",
+    title: none,
     target: figure.where(kind: table)
   )
 
