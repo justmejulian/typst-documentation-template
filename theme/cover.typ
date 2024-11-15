@@ -26,9 +26,9 @@
   set par(leading: 1em)
 
   // --- Cover ---
-  align(center, image("../figures/logo.png", width: 80%))
+  align(center, image("../figures/logo.png", width: 90%))
 
-  v(15mm)
+  v(30mm)
 
   align(center, text(font: sans-font, 2em, weight: 700, title))
 
