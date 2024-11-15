@@ -15,7 +15,6 @@
 
   set page(
     margin: (left: 30mm, right: 30mm, top: 40mm, bottom: 40mm),
-    numbering: "1",
     number-align: center,
   )
 
@@ -58,6 +57,9 @@
 
   // --- Paragraphs ---
   set par(leading: 1em)
+  set par(justify: true)
+  // If you need to paragraph to be indented, use the following:
+  // set par(justify: true, first-line-indent: 2em)
 
   // --- Citations ---
   set cite(style: "alphanumeric")
@@ -74,14 +76,11 @@
       text(font: body-font, 1.5em, weight: 700, "Contents")
       v(15mm)
     },
-    indent: 2em
+    indent: 2em,
+    depth: 3
   )
 
   v(2.4fr)
-  pagebreak()
-
-  // Main body.
-  set par(justify: true, first-line-indent: 2em)
 
   // Page Header
   set page(header: rect(stroke: (bottom: 0.5pt))[
@@ -112,10 +111,12 @@
     target: figure.where(kind: table)
   )
 
-  // Appendix.
-  pagebreak()
-  heading(numbering: none)[Appendix A: Supplementary Material]
-  include("appendix.typ")
+  // List of listings.
+  heading(numbering: none)[List of Listings]
+  outline(
+    title: none,
+    target: figure.where(kind: raw)
+  )
 
   pagebreak()
   bibliography("../bibliography.bib")
