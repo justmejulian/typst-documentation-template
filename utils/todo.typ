@@ -6,7 +6,7 @@
     radius: 10%,
     stroke: 0.5pt,
     fill: color,
-    body
+    body,
   )
 }
 

@@ -12,9 +12,9 @@
   )
 
   set text(
-    font: body-font, 
-    size: 12pt, 
-    lang: "en"
+    font: body-font,
+    size: 12pt,
+    lang: "en",
   )
 
   set par(leading: 1em)
@@ -25,8 +25,8 @@
 
   v(15mm)
   grid(
-      columns: 2,
-      gutter: 1fr,
-      "Zurich, " + submissionDate, author
+    columns: 2,
+    gutter: 1fr,
+    "Zurich, " + submissionDate, author,
   )
 }

@@ -22,7 +22,7 @@
   subtitle: subtitle,
   date: date,
   institution-name: "ZHAW School of Engineering",
-  logo: image("zhaw-logo.png", width: 50mm)
+  logo: image("zhaw-logo.png", width: 50mm),
 )
 
 #slide(title: [Slide title], new-section: [The section])[

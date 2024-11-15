@@ -27,7 +27,7 @@
 
 #acknowledgement[
   A ZHAW Thesis Template, created using Typst @justmejulian-github.\ \
-  The Following sections are from the TUM Thesis Template @tum-thesis-template. 
+  The Following sections are from the TUM Thesis Template @tum-thesis-template.
   They are included here to show the structure of a typical thesis.
 ]
 

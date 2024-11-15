@@ -8,7 +8,7 @@
   Note: If you did an evaluation / case study, describe it here.
 ]
 
-== Design 
+== Design
 #rect(
   width: 100%,
   radius: 10%,

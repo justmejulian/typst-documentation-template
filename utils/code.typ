@@ -8,6 +8,6 @@
   figure(
     code,
     caption: caption,
-    gap: 1.5em
+    gap: 1.5em,
   )
 }

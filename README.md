@@ -36,6 +36,21 @@ brew install --cask skim
 
 todo: add how to setup typst-lsp / Treesitter.
 
+## Formatting
+
+I use [typstyle](https://github.com/Enter-tainer/typstyle/?tab=readme-ov-file) to format my typst code.
+
+```
+typstyle -i format-all
+```
+
+### Install
+
+```
+brew install typstyle
+```
+
+
 ## Todo
 
 Github action to build

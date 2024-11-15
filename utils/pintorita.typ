@@ -11,7 +11,7 @@
 
   figure(
     content,
-    caption: caption
+    caption: caption,
   )
 }
 

@@ -8,14 +8,14 @@
   )
 
   set text(
-    font: body-font, 
-    size: 12pt, 
-    lang: "en"
+    font: body-font,
+    size: 12pt,
+    lang: "en",
   )
 
   set par(
     leading: 1em,
-    justify: true
+    justify: true,
   )
 
   // --- Abstract ---

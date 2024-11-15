@@ -49,8 +49,8 @@
 )[
   Note: List and describe all functional requirements of your system. Also mention requirements that you were not able to realize. The short title should be in the form “verb objective”
 
-  - FR1 Short Title: Short Description. 
-  - FR2 Short Title: Short Description. 
+  - FR1 Short Title: Short Description.
+  - FR2 Short Title: Short Description.
   - FR3 Short Title: Short Description.
 ]
 
@@ -66,8 +66,8 @@
 )[
   Note: List and describe all nonfunctional requirements of your system. Also mention requirements that you were not able to realize. Categorize them using the FURPS+ model described in @bruegge2004object without the category functionality that was already covered with the functional requirements.
 
-  - NFR1 Category: Short Description. 
-  - NFR2 Category: Short Description. 
+  - NFR1 Category: Short Description.
+  - NFR2 Category: Short Description.
   - NFR3 Category: Short Description.
 
 ]

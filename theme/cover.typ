@@ -18,9 +18,9 @@
   )
 
   set text(
-    font: body-font, 
-    size: 12pt, 
-    lang: "en"
+    font: body-font,
+    size: 12pt,
+    lang: "en",
   )
 
   set par(leading: 1em)
@@ -46,9 +46,11 @@
 
   v(15mm)
 
-  align(center,
+  align(
+    center,
     box(
-      align(left,
+      align(
+        left,
         grid(
           columns: 2,
           column-gutter: 2em,
@@ -58,8 +60,8 @@
           strong("Advisor: "), advisor,
           strong("Expert: "), expert,
           strong("Proof-Reader: "), proofReader,
-        )
-      )
-    )
+        ),
+      ),
+    ),
   )
 }

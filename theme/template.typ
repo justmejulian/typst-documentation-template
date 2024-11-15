@@ -19,9 +19,9 @@
   )
 
   set text(
-    font: body-font, 
-    size: 12pt, 
-    lang: "en"
+    font: body-font,
+    size: 12pt,
+    lang: "en",
   )
 
   show math.equation: set text(weight: 400)
@@ -34,7 +34,7 @@
     if it.level == 1 {
       pagebreak(weak: true) // Add a pagebreak before each chapter. (Heading level 1)
     }
-    if (it.level >= 4){
+    if (it.level >= 4) {
       block(it.body) // Disable numbering for headings below level 3.
     } else {
       it
@@ -48,7 +48,7 @@
       [Chapter ]
       numbering(
         el.numbering,
-        ..counter(heading).at(el.location())
+        ..counter(heading).at(el.location()),
       )
     } else {
       it
@@ -77,17 +77,19 @@
       v(15mm)
     },
     indent: 2em,
-    depth: 3
+    depth: 3,
   )
 
   v(2.4fr)
 
   // Page Header
-  set page(header: rect(stroke: (bottom: 0.5pt))[
+  set page(
+    header: rect(stroke: (bottom: 0.5pt))[
       #getCurrentHeading()
       #h(1fr)
       #author
-  ])
+    ],
+  )
 
   // Main body.
   set page(numbering: "1")
@@ -108,14 +110,14 @@
   heading(numbering: none)[List of Tables]
   outline(
     title: none,
-    target: figure.where(kind: table)
+    target: figure.where(kind: table),
   )
 
   // List of listings.
   heading(numbering: none)[List of Listings]
   outline(
     title: none,
-    target: figure.where(kind: raw)
+    target: figure.where(kind: raw),
   )
 
   pagebreak()

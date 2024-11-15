@@ -15,7 +15,7 @@
   stroke: 0.5pt,
   fill: yellow,
 )[
-Info
+  Info
   Note: This section would summarize the concept User Feedback using definitions, historical overviews and pointing out the most important aspects of User Feedback.
 ]
 
