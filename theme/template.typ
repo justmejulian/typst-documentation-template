@@ -1,5 +1,7 @@
 #import "constant.typ": body-font, sans-font
 
+#import "glossary.typ": glossary
+
 #import "../utils/getCurrentHeading.typ": getCurrentHeading
 
 #let project(
@@ -117,4 +119,7 @@
 
   pagebreak()
   bibliography("../bibliography.bib")
+
+  pagebreak()
+  glossary()
 }
